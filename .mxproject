@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/TheKi/Documents/AD_Hoc_Workspace/stm32_camera_l496/Inc
+HeaderPath=E:/camera_project_temp/Inc
 HeaderFiles=stm32l4xx_it.h;stm32l4xx_hal_conf.h;main.h;
-SourcePath=C:/Users/TheKi/Documents/AD_Hoc_Workspace/stm32_camera_l496/Src
+SourcePath=E:/camera_project_temp/Src
 SourceFiles=stm32l4xx_it.c;stm32l4xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]

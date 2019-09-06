@@ -40,7 +40,10 @@ picSize = picSize160x120
 raw_img_postfix = ".raw"
 data_buffer = []
 
-for i in range (1,10):
+print ("Enter number of frame, you want to convert: ")
+num_pics = int(input())
+
+for i in range (1,num_pics):
 #####################################################
 # get data from uart-usb
 #####################################################
@@ -56,7 +59,8 @@ for i in range (1,10):
 count = 0
 for data in data_buffer:
     fileName = "image"
-    fileName = fileName + str(++count) + raw_img_postfix
+    count +=1;
+    fileName = fileName + str(count) + raw_img_postfix
     fileRaw = open(fileName, "wb+")
     for bit in data:
         fileRaw.write(bit)

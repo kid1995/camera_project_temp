@@ -521,7 +521,7 @@ void ov2640_Init(uint16_t DeviceAddr, uint32_t resolution) {
   /* Prepare the camera to be configured */
   CAMERA_IO_Write(DeviceAddr, OV2640_DSP_RA_DLMT, 0x01);
   CAMERA_IO_Write(DeviceAddr, OV2640_SENSOR_COM7, 0x80);
-  CAMERA_Delay(500);
+  CAMERA_Delay(2);
 
   /* Initialize OV2640 */
   switch (resolution) {
@@ -529,7 +529,7 @@ void ov2640_Init(uint16_t DeviceAddr, uint32_t resolution) {
       for (index = 0; index < (sizeof(OV2640_QQVGA) / 2); index++) {
         CAMERA_IO_Write(DeviceAddr, OV2640_QQVGA[index][0],
                         OV2640_QQVGA[index][1]);
-        CAMERA_Delay(1);
+        CAMERA_Delay(0.5);
       }
       break;
     }
@@ -537,7 +537,7 @@ void ov2640_Init(uint16_t DeviceAddr, uint32_t resolution) {
       for (index = 0; index < (sizeof(OV2640_QVGA) / 2); index++) {
         CAMERA_IO_Write(DeviceAddr, OV2640_QVGA[index][0],
                         OV2640_QVGA[index][1]);
-        CAMERA_Delay(1);
+        CAMERA_Delay(0.5);
       }
       break;
     }
@@ -545,7 +545,7 @@ void ov2640_Init(uint16_t DeviceAddr, uint32_t resolution) {
       for (index = 0; index < (sizeof(OV2640_480x272) / 2); index++) {
         CAMERA_IO_Write(DeviceAddr, OV2640_480x272[index][0],
                         OV2640_480x272[index][1]);
-        CAMERA_Delay(2);
+        CAMERA_Delay(0.5);
       }
       break;
     }
